@@ -1,3 +1,7 @@
+const { MongoClient } = require('mongodb')
+
+const client = new MongoClient('mongodb://localhost:27017')
+
 const getDb = () => client.connect().then(() => {
   const db = client.db('testdb')
   return db
